@@ -1,0 +1,24 @@
+.contentContainer {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.userContainer {
+  margin-top: 32px;
+  display: flex;
+}
+
+.userId {
+  font-size: 16px;
+}
+
+.userName {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.content {
+  margin-top: 32px;
+}
