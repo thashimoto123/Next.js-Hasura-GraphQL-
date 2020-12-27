@@ -6,7 +6,7 @@
     custom_column_names:
       author_id: authorId
       updated_at: updatedAt
-      published_at: pubsishedAt
+      published_at: publishedAt
       created_at: createdAt
   object_relationships:
   - name: user

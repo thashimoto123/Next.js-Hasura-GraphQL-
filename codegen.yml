@@ -7,9 +7,12 @@ generates:
     plugins:
       - typescript
       - typescript-operations
-      - typescriopt-react-apollo
+      - typescript-react-apollo
     config:
       skipTypename: false
       withHooks: true
       withHOC: false
       withComponent: false
+      scalars:
+        timestamptz: string
+        uuid: string
