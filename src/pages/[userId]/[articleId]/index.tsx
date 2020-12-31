@@ -3,8 +3,10 @@ import { NextPage } from 'next'
 import Error from 'next/error'
 
 import { useGetArticleQuery } from '@/generated/graphql'
-import styles from './index.module.css'
 import { Article } from '@/components/article'
+
+import styles from './index.module.css'
+import { formatDate } from '@/utils/date'
 
 const ArticlePage: NextPage = () => {
   const router = useRouter()
@@ -28,7 +30,11 @@ const ArticlePage: NextPage = () => {
     return <Error statusCode={404} />
   }
 
-  const { user, subject, content} = data.articles_by_pk
+  const { user, subject, content, publishedAt } = data.articles_by_pk
+  if (!publishedAt) {
+    return <Error statusCode={404} />
+  }
+  const { datetime, isNew } = formatDate(new Date(publishedAt), new Date())
 
   return (
     <div className={styles.contentContainer}>
@@ -39,8 +45,11 @@ const ArticlePage: NextPage = () => {
         </div>
         <div>
           <div className={styles.userText}>
-            <div className={styles.userId}>{user.displayId}</div>
-            <div className={styles.userName}>{user.displayName}</div>
+            <div className={styles.userId}>{user.displayName} @{user.displayId}</div>
+            <span className={styles.publishedAt}>
+              <span>{datetime}</span>
+              {isNew ? <span className={styles.newContent}>New</span> : ''}
+            </span>
           </div>
         </div>
       </div>
