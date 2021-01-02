@@ -1,0 +1,18 @@
+body {
+  font-family: "Helvetica Neue", Arial, "hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+input {
+  border: none;
+}
+
+textarea {
+  border: none;
+  resize: none;
+}
