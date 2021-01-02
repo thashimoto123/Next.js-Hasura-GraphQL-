@@ -10,6 +10,7 @@
   "dependencies": {
     "@apollo/client": "^3.2.7",
     "@apollo/react-hooks": "^4.0.0",
+    "autosize": "^4.0.2",
     "graphql": "^15.4.0",
     "minireset.css": "0.0.6",
     "next": "10.0.1",
@@ -21,6 +22,7 @@
     "@graphql-codegen/typescript": "^1.17.11",
     "@graphql-codegen/typescript-operations": "^1.17.10",
     "@graphql-codegen/typescript-react-apollo": "^2.1.1",
+    "@types/autosize": "^3.0.7",
     "@types/eslint": "^7.2.5",
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/jest": "^26.0.15",
