@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { SiteHeader, SiteHeaderItem } from '@/components/site-header'
 import { Editor } from '@/components/editor'
 import { Button } from '@/components/button'
+import { UserIcon } from '@/components/user-icon'
 import { usePostArticleMutation } from '@/generated/graphql'
 
 import styles from './index.module.css'
@@ -62,7 +63,7 @@ const PostPage: NextPage = () => {
         </form>
       </SiteHeaderItem>
       <SiteHeaderItem>
-        <img className={styles.userIcon} src="/profile.png" alt=""/>
+        <UserIcon src="/profile.png" />
       </SiteHeaderItem>
     </>
   )
